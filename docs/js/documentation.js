@@ -71,9 +71,7 @@ $(function () {
     // To enable touch events on desktop
     // Remove this when building in PhoneGap
     if (detect) {
-        if ($('.nexus-content').length > 0) new FingerBlast('.nexus-content');
-
-
+        if ($('.nexus-content').length > 0 && $('#nexus').css('display') != 'none') new FingerBlast('.nexus-content');
         if ($('.inner-content').length > 0) new FingerBlast('.inner-content');
     }
   };
