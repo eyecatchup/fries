@@ -1,4 +1,4 @@
-# Fries v2.0.3 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jaunesarmiento/fries/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+# Fries v2.0.5 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jaunesarmiento/fries/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Fries is an awesome mobile UI framework for Android apps using just HTML, CSS,
 and Javascript and is inspired by [Ratchet].
@@ -27,7 +27,7 @@ Fries uses [Jekyll] to run the documentation and examples.
 
 ### Running the docs and examples locally
 1.  Install [Jekyll]
-2.  From the root directory of Fries, run `jekyll serve`
+2.  From the root directory of Fries, run `jekyll --server --auto`
 3.  Open `http://localhost:4000/` in your favorite browser to see the documentation or `http://localhost:4000/examples/` for the examples.
 
 __Note:__ You also might want to resize your browser's screen resolutiion and
@@ -56,7 +56,7 @@ The conversion of the official Android icons was done in [IcoMoon]. Also, thanks
 
 ## License
 
-Fries is licensed under the [MIT License]. Copyright &copy; Jaune Sarmiento (http://jaunesarmiento.me) 2013.
+Fries is licensed under the [MIT License]. Copyright &copy; Jaune Sarmiento (http://jaunesarmiento.me) 2014.
 
 
 ## Attribution
@@ -69,8 +69,8 @@ __Android Action Bar Icon Pack__
 By [Tobias Bieniek](https://github.com/Turbo87/Android-Action-Bar-Icon-Pack-Font) also under Creative Commons 2.5 License
 
 [Download]: https://github.com/jaunesarmiento/fries/archive/master.zip
-[Ratchet]: http://maker.github.io/ratchet
-[documentation]: http://jaunesarmiento.me/fries
+[Ratchet]: http://goratchet.com/
+[documentation]: http://getfri.es
 [Semantic Versioning]: http://semver.org/
 [Grunt]: http://gruntjs.com/
 [Jekyll]: http://jekyllrb.com/
