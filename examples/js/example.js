@@ -56,6 +56,6 @@
   // To enable touch events on desktop
   // Remove this when building in PhoneGap
   if (!detect()) {
-    window.onload = new FingerBlast('body');
+    window.onload = function(){ new FingerBlast('body') };
   }
 } ());
