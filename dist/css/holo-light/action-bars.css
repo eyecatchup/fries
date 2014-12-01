@@ -50,7 +50,6 @@
   border-bottom: 1px solid #d2d2d2;
   background-color: #dddddd; }
   .action-bar .title,
-  .action-bar .subtitle,
   .action-bar .app-icon {
     float: left;
     display: inline-block; }
@@ -67,6 +66,7 @@
     padding: 8px 0 4px; }
   .action-bar .subtitle {
     color: #777777;
+    display: block;
     font-size: 12px;
     font-weight: 200; }
   .action-bar .app-icon {
