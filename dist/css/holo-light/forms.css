@@ -77,12 +77,12 @@ form {
   display: block;
   outline: none;
   border: none;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid darkgrey;
   padding: 10px 10px 0;
   width: 100%;
   height: 48px;
   background: transparent;
-  color: white;
+  color: #222222;
   font-size: 14px;
   vertical-align: middle;
   -webkit-transition: border ease-out 0.2s;
@@ -105,12 +105,12 @@ label.block-label {
   padding: 5px 5px 3px;
   margin-top: 10px;
   width: 100%;
-  border-bottom: 2px solid #595959;
+  border-bottom: 2px solid #bababa;
   font-size: 14px;
   font-weight: bold;
   line-height: 18px;
   text-transform: uppercase;
-  color: #cccccc; }
+  color: #222222; }
 
 label.inline-label {
   display: block; }
@@ -128,7 +128,7 @@ label.inline-label {
     bottom: 0;
     height: 5px;
     width: 1px;
-    background: #333333;
+    background: darkgrey;
     -webkit-transition: background ease-out 0.2s;
     -moz-transition: background ease-out 0.2s;
     transition: background ease-out 0.2s; }
@@ -150,7 +150,7 @@ label.inline-label {
   .input-switch-wrapper .input-switch {
     display: none; }
     .input-switch-wrapper .input-switch:checked + .input-switch-outer .input-switch-button {
-      background-color: rgba(0, 153, 204, 0.8);
+      background-color: #ababab;
       -webkit-transform: translateX(100%);
       transform: translateX(100%); }
       .input-switch-wrapper .input-switch:checked + .input-switch-outer .input-switch-button:before {
@@ -162,7 +162,7 @@ label.inline-label {
     border: 0px solid #999999;
     border-radius: 0px; }
     .input-switch-wrapper .input-switch-outer .input-switch-inner {
-      background: #333333; }
+      background: rgba(153, 153, 153, 0.3); }
       .input-switch-wrapper .input-switch-outer .input-switch-inner .input-switch-button {
         -webkit-border-radius: 2px;
         -moz-border-radius: 2px;
@@ -176,7 +176,7 @@ label.inline-label {
         text-transform: uppercase;
         text-align: center;
         line-height: 24px;
-        background-color: #424242;
+        background-color: #bebebe;
         color: white;
         -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.5);
         -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(0, 0, 0, 0.25), inset 0 2px 0 rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.5);
@@ -248,7 +248,7 @@ label.inline-label {
     display: block;
     width: 16px;
     height: 16px;
-    border: 1px solid #424242;
+    border: 1px solid #cecece;
     cursor: pointer;
     -webkit-transition: all 0.1s ease-out;
     transition: all 0.1s ease-out; }
@@ -348,7 +348,7 @@ label.inline-label {
     display: block;
     width: 16px;
     height: 16px;
-    border: 1px solid #424242;
+    border: 1px solid #cecece;
     cursor: pointer;
     -webkit-transition: all 0.1s ease-out;
     transition: all 0.1s ease-out; }

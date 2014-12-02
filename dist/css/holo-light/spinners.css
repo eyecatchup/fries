@@ -48,7 +48,7 @@
   padding: 0;
   list-style: none;
   line-height: 1.1em;
-  background-color: #222222;
+  background-color: whitesmoke;
   background-clip: border-box;
   opacity: 0;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -64,7 +64,7 @@
     float: left;
     margin: 0;
     width: 100%;
-    border-bottom: 1px solid #313131;
+    border-bottom: 1px solid gainsboro;
     text-align: left; }
     .spinner li a {
       float: left;
@@ -75,7 +75,7 @@
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      color: white;
+      color: #333333;
       font-weight: normal; }
     .spinner li:first-child {
       border-top-left-radius: 2px;
@@ -85,7 +85,7 @@
       border-bottom-left-radius: 2px;
       border-bottom-right-radius: 2px; }
     .spinner li:hover, .spinner li:active {
-      background-color: rgba(51, 181, 229, 0.6); }
+      background-color: rgba(153, 153, 153, 0.2); }
   .spinner.active {
     opacity: 1;
     z-index: 99;
@@ -128,8 +128,8 @@
     font-size: 14px;
     text-transform: uppercase;
     text-align: right;
-    color: white;
-    border-bottom: 1px solid #3c3c3c;
+    color: #333333;
+    border-bottom: 1px solid darkgrey;
     vertical-align: middle;
     outline: none; }
     .form-spinner .toggle-spinner:after {
@@ -141,7 +141,7 @@
       width: 0;
       height: 0;
       border-right: 12px solid transparent;
-      border-top: 12px solid #595959;
+      border-top: 12px solid darkgrey;
       -webkit-transform: rotate(180deg);
       -moz-transform: rotate(180deg);
       transform: rotate(180deg); }

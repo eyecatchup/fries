@@ -35,6 +35,10 @@
         var index;
         var descendant;
 
+        if (!element) {
+          return;
+        }
+
         if ('compareDocumentPosition' in ancestor) {
           return !!(ancestor.compareDocumentPosition(element) & 16);
         } else if ('contains' in ancestor) {
@@ -193,50 +197,56 @@
           gestureName = 'gestureend';
         }
 
-        events.forEach(function(event) {
+        events.forEach(function (event) {
           var gesture = this.createMouseEvent.call(event._finger, gestureName, event);
           gestures.push(gesture);
         }.bind(this));
 
-        events.concat(gestures).forEach(function(event) {
+        events.concat(gestures).forEach(function (event) {
           event.scale = distance / this.startDistance;
           event.rotation = this.startAngle - angle;
         });
       }
 
       // Loop through the events array and fill in each touch array.
-      events.forEach(function(touch) {
-        touch.touches = events.filter(function(e) {
+      events.forEach(function (touch) {
+        touch.touches = events.filter(function (e) {
           return ~e.type.indexOf('touch') && e.type !== 'touchend';
         });
 
-        touch.changedTouches = events.filter(function(e) {
+        touch.changedTouches = events.filter(function (e) {
           return ~e.type.indexOf('touch') && e._finger.target === touch._finger.target;
         });
 
-        touch.targetTouches = touch.changedTouches.filter(function(e) {
+        touch.targetTouches = touch.changedTouches.filter(function (e) {
           return ~e.type.indexOf('touch') && e.type !== 'touchend';
         });
       });
 
       // Then fire the events.
-      events.concat(gestures).forEach(function(event, i) {
+      events.concat(gestures).forEach(function (event, i) {
         event.identifier = i;
         event._finger.target.dispatchEvent(event);
       });
     },
 
     createMouseEvent: function (eventName, originalEvent) {
-      var e = document.createEvent('MouseEvent');
-
-      e.initMouseEvent(eventName, true, true,
-        originalEvent.view, originalEvent.detail,
-        this.x || originalEvent.screenX, this.y || originalEvent.screenY,
-        this.x || originalEvent.clientX, this.y || originalEvent.clientY,
-        originalEvent.ctrlKey, originalEvent.shiftKey,
-        originalEvent.altKey, originalEvent.metaKey,
-        originalEvent.button, this.target || originalEvent.relatedTarget
-      );
+      var e = new MouseEvent(eventName, {
+        view       : window,
+        detail     : originalEvent.detail,
+        bubbles    : true,
+        cancelable : true,
+        target     : this.target || originalEvent.relatedTarget,
+        clientX    : this.x || originalEvent.clientX,
+        clientY    : this.y || originalEvent.clientY,
+        screenX    : this.x || originalEvent.screenX,
+        screenY    : this.y || originalEvent.screenY,
+        ctrlKey    : originalEvent.ctrlKey,
+        shiftKey   : originalEvent.shiftKey,
+        altKey     : originalEvent.altKey,
+        metaKey    : originalEvent.metaKey,
+        button     : originalEvent.button
+      });
 
       e.synthetic = true;
       e._finger   = this;
